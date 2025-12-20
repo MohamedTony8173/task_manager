@@ -4,7 +4,6 @@ from tasks.models import Task,Epic,Sprint
 class TaskAdmin(admin.ModelAdmin):
     list_display = (
         "title",
-        "description",
         "status",
         "owner",
         "created_at",

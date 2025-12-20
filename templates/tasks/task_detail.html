@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h2 class="display-6">Detail of Task Here</h2>
+
+  <p>
+    <a href="">{{ task.title|capfirst }}</a>
+  </p>
+  <p>{{ task.description }}</p>
+
+  <br />
+  <a href="{% url 'tasks:task_update' task.id %}">Edit</a>
+  <a href="{% url 'tasks:task_delete' task.id %}">Delete</a>
+{% endblock %}

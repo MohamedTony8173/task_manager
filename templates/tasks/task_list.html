@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="display-6">All Task Here</h2>
+<ul>
+    {% for task in tasks %}
+    <li><a href="{% url "tasks:task_detail" task.id %}">{{task.title|capfirst}}</a></li>
+    {% endfor %}
+</ul>
+<br>
+
+{% endblock content %}
